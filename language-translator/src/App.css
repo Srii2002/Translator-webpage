@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app-container {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.slogan {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-width: 700px;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.wrapper {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+.wrapper:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-input .to-text {
+  border-radius: 0px;
+  border-left: 1px solid #ccc;
+}
+
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  background: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.text-input textarea:hover,
+.text-input textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-input textarea::placeholder {
+  color: #b7b6b6;
+}
+
+.controls,
+li,
+.icons,
+.icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+}
+
+.controls .row .icons {
+  width: 38%;
+}
+
+.controls .row .icons i {
+  width: 50px;
+  color: #adadad;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  justify-content: center;
+}
+
+.controls .row .icons i:hover {
+  color: #ff9a9e;
+  transform: scale(1.2);
+}
+
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+.controls .row select {
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.controls .row select:hover {
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+.text-input textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+.controls .exchange {
+  color: #adadad;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.controls .exchange:hover {
+  color: #ff9a9e;
+  transform: scale(1.1);
+}
+
+.controls i:active {
+  transform: scale(0.9);
+}
+
+.container button {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #ff9a9e;
+  transform: scale(1.05);
+}
